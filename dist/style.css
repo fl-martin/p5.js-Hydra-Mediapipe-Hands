@@ -1,0 +1,27 @@
+body {
+	background-color: #000;
+}
+
+#canvas {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 1;
+}
+
+#video {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: -1;
+	border: 3px #fff solid;
+	border-radius: 10px;
+	transform: scale(-1, 1);
+}
+
+#hydracanvas {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 1;
+}
