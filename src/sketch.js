@@ -6,12 +6,15 @@ import {
 	middleDist,
 	middleMcp,
 	sidesDist,
+	vectorSidesDist,
+	sideA,
+	sideB,
 } from "./hands-functions/handsValues.js";
 
 export let p5canvas;
 export let myp5;
 
-export const p5Sketch = () => {
+export const p5Sketch = (() => {
 	let sketch = function (p) {
 		p.setup = function () {
 			p5canvas = p.createCanvas(640, 480);
@@ -35,6 +38,5 @@ export const p5Sketch = () => {
 			p.pop();
 		};
 	};
-
 	myp5 = new p5(sketch);
-};
+})();

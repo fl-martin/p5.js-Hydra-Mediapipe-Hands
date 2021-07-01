@@ -1,4 +1,5 @@
 import { videoElement } from "./hands.js";
+import { vectorSidesDist } from "./hands-functions/handsValues.js";
 
 export const hydraSketch = () => {
 	const c = document.createElement("canvas");
@@ -18,6 +19,18 @@ export const hydraSketch = () => {
 	src(o0)
 		.modulate(osc(1, 2, 1), 0.003)
 		.colorama(0.01)
+		.scale(1.01)
 		.blend(src(s1), 0.1)
 		.out(o0);
+
+	src(o1)
+		.modulate(osc(1, 2, 1), 0.003)
+		//.pixelate(50, 50)
+		.blend(src(s0).scale(1, -1), 0.3)
+		.modulate(src(o0), () => vectorSidesDist)
+		.out(o1);
+
+	src(o1).layer(o0).out(o3);
+
+	render(o3);
 };

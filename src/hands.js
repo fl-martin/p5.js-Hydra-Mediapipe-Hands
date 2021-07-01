@@ -1,6 +1,7 @@
 import { generateValues } from "./hands-functions/handsValues.js";
 
 export const videoElement = document.getElementById("video");
+videoElement.style.transform = "scale(-1, 1)";
 console.log("handsmodule");
 
 export const handsSketch = () => {

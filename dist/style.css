@@ -2,7 +2,7 @@ body {
 	background-color: #000;
 }
 
-#canvas {
+#p5canvas {
 	position: absolute;
 	top: 10px;
 	left: 10px;
@@ -14,14 +14,12 @@ body {
 	top: 10px;
 	left: 10px;
 	z-index: -1;
-	border: 3px #fff solid;
 	border-radius: 10px;
-	transform: scale(-1, 1);
 }
 
 #hydracanvas {
 	position: absolute;
 	top: 10px;
 	left: 10px;
-	z-index: 1;
+	z-index: 2;
 }

@@ -5,6 +5,7 @@
 	"main": "caller.js",
 	"scripts": {
 		"build": "webpack --mode production",
+		"deploy": "git subtree push --prefix dist origin gh-pages",
 		"start": "npx webpack serve --open"
 	},
 	"author": "",

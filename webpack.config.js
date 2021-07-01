@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
 	mode: "development",
-	entry: "./src/caller.js",
+	entry: "./src/sketch.js",
 	devServer: {
 		contentBase: path.join(__dirname, "dist"),
 		compress: true,
