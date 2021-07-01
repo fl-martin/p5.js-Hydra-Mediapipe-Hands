@@ -9,6 +9,5 @@ Red.thumb
 Green.index
 Blue.middle
 
-<a href="https://fl-martin.github.io/p5.js-Hydra-Mediapipe-Hands">Live Demo</a>
-
-<div>![GifDemo](gifball.gif)</div>
+<a href="https://fl-martin.github.io/p5.js-Hydra-Mediapipe-Hands">Live Demo</a><br>
+![GifDemo](gifball.gif)
