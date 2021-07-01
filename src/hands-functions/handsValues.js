@@ -85,7 +85,7 @@ const generateValues = (detections) => {
 		0.2
 	);
 
-	vectorSidesDist = myp5.map(sideA.dist(sideB), 0.04, 0.3, 0, 0.5);
+	vectorSidesDist = myp5.map(sideA.dist(sideB), 0.04, 0.3, 0, 0.65);
 };
 
 export {
