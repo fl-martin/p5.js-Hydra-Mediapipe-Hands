@@ -10,4 +10,5 @@ Green.index
 Blue.middle
 
 <a href="https://fl-martin.github.io/p5.js-Hydra-Mediapipe-Hands">Live Demo</a>
-![GifDemo](gifball.gif)
+
+<div>![GifDemo](gifball.gif)</div>
