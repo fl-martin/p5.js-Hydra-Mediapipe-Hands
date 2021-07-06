@@ -15,8 +15,8 @@ export const handsSketch = () => {
 		onFrame: async () => {
 			await hands.send({ image: videoElement });
 		},
-		width: document.windowWidth,
-		height: document.windowHeight,
+		width: 1280,
+		height: 720,
 	});
 	camera.start();
 

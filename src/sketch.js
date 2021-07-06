@@ -1,5 +1,6 @@
 import { hydraSketch } from "./hydra.js";
 import { handsSketch } from "./hands.js";
+import { webAudio, filterFrequency } from "./webAudio.js";
 import {
 	thumbDist,
 	indexDist,
@@ -13,15 +14,20 @@ import {
 
 export let p5canvas;
 export let myp5;
+let x = 1;
+let y = 1;
+let size = 1;
+const easing = 0.05;
 
 export const p5Sketch = (() => {
 	let sketch = function (p) {
 		p.setup = function () {
-			p5canvas = p.createCanvas(640, 480);
+			p5canvas = p.createCanvas(1280, 720);
 			p5canvas.id("p5canvas");
 			console.log("canvascreate");
 			handsSketch();
 			hydraSketch();
+			webAudio();
 		};
 
 		p.draw = function () {
@@ -30,12 +36,24 @@ export const p5Sketch = (() => {
 			p.push();
 			p.noStroke();
 			p.fill(thumbDist, indexDist, middleDist);
-			p.ellipse(
-				p.map(middleMcp.x, 0, 1, 0, width),
-				p.map(middleMcp.y, 0, 1, 0, height),
-				sidesDist
-			);
+			let targetX = p.map(middleMcp.x, 0, 1, 0, width);
+			let dx = targetX - x;
+			x += dx * easing;
+
+			let targetY = p.map(middleMcp.y, 0, 1, 0, height);
+			let dy = targetY - y;
+			y += dy * easing;
+
+			let targetSize = sidesDist;
+			let dsize = targetSize - size;
+			size += dsize * (easing * 2);
+
+			p.ellipse(x, y, size);
 			p.pop();
+
+			filterFrequency(
+				p.map(sidesDist, width / 30, width, 80, 20000, true)
+			);
 		};
 	};
 	myp5 = new p5(sketch);

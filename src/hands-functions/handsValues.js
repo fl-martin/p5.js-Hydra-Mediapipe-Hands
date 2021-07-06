@@ -29,7 +29,7 @@ let wrist = { x: "", y: "" },
 	rHandIndex;
 
 const generateValues = (detections) => {
-	//CHECKING IF RIGHT HAND DETECTED  (falta consistencia, llevar calculos myp5 a sketch, mejorar declaracion de variables ¿directo en la asignacion? Las que necesitan valor inicial, darselo en sketch, como pasar videoElement ya invertido?, emprolijar nombres sobre todo el ultimo vectorsides (pensar nombre por manos tambien))
+	//CHECKING IF RIGHT HAND DETECTED  (falta consistencia, llevar calculos myp5 a sketch, mejorar declaracion de variables ¿directo en la asignacion? Las que necesitan valor inicial, darselo en sketch, como pasar videoElement ya invertido?, emprolijar nombres sobre todo el ultimo vectorsides (pensar nombre por manos tambien), lerp a la posicion, )
 	if (detections.multiHandedness == undefined) return;
 	else if (
 		detections.multiHandedness.length == 1 &&
